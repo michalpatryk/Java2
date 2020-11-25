@@ -11,8 +11,10 @@ class DirectionManagerTest {
         directionManager = new DirectionManager();
     }
 
+    /**
+     * Left turning test
+     */
     @org.junit.jupiter.api.Test
-    //Checks left turning
     void turnLeft() {
         assertEquals(directionManager.getHorizontalMath(), 0, "We are facing up");
         assertEquals(directionManager.getVerticalMath(), 1, "We are facing up");
@@ -26,7 +28,10 @@ class DirectionManagerTest {
         assertEquals(directionManager.getHorizontalMath(), 1, "We are facing right");
         assertEquals(directionManager.getVerticalMath(), 0, "We are facing right");
     }
-    //Checks right turning
+
+    /**
+     * Right turning test
+     */
     @org.junit.jupiter.api.Test
     void turnRight() {
         assertEquals(directionManager.getHorizontalMath(), 0, "We are facing up");

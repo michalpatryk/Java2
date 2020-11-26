@@ -6,13 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DirectionManagerTest {
     private DirectionManager directionManager;
+
+    /**
+     * Set ups the directionManager
+     */
     @BeforeEach
     void setUp(){
         directionManager = new DirectionManager();
     }
 
     /**
-     * Left turning test
+     * Left turning test and getHorizontalMath()/getVericalMath() test
      */
     @org.junit.jupiter.api.Test
     void turnLeft() {
@@ -30,7 +34,7 @@ class DirectionManagerTest {
     }
 
     /**
-     * Right turning test
+     * Right turning test and getHorizontalMath()/getVericalMath() test
      */
     @org.junit.jupiter.api.Test
     void turnRight() {

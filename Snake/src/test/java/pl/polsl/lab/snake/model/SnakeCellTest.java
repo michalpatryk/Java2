@@ -37,7 +37,8 @@ class SnakeCellTest {
                 Arguments.of(1, 2, 2, 1, false),
                 Arguments.of(0, 0, 0, 0, true),
                 Arguments.of(-1, -1, 1, 1, false),
-                Arguments.of(1, -1, -1, 1, false)
+                Arguments.of(1, -1, -1, 1, false),
+                Arguments.of(21111, 37777, 502932573, 0, false)
         );
     }
 }

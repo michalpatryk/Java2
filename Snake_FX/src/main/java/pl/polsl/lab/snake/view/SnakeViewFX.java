@@ -24,4 +24,19 @@ public class SnakeViewFX {
             e.printStackTrace();
         }
     }
+
+    public String checkIfCorrect(int correctAnswer, int userAnswer){
+        if(correctAnswer - userAnswer == 0){
+            return "You were correct";
+        }
+        else if (correctAnswer == 0 && userAnswer != 0){
+            return  "You were wrong. The snake did not crash";
+        }
+        else if (userAnswer == 0){
+            return  ("You were wrong. The snake crashed at " + correctAnswer);
+        }
+        else {
+            return  ("You were wrong by " + Math.abs(userAnswer - correctAnswer));
+        }
+    }
 }

@@ -1,8 +1,5 @@
 package pl.polsl.lab.snake;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pl.polsl.lab.snake.controller.SnakeControllerFX;
 
@@ -59,16 +56,21 @@ public class Application extends javafx.application.Application {
         //SnakeController snakeController = new SnakeController(snake, snakeView);
         SnakeControllerFX snakeControllerFX = new SnakeControllerFX();
 //
-        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/SnakeHelloFXML.fxml"));
-        //Parent root = (Parent)fxmlLoader.load();
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/src/main/java/pl/polsl/lab/snake/view/SnakeHelloFXML.fxml"));
+//        Parent root = fxmlLoader.load();
+//        Parent root = (Parent)fxmlLoader.load();
         //SnakeControllerFX controllerFX = (SnakeControllerFX)
         //snakeControllerFX.setStage(primaryStage);
+        URL url1 = getClass().getResource("pl.polsl.lab.snake/SnakeHelloFXML.fxml");
+        URL url2 = getClass().getResource("SnakeHelloFXML.fxml");
+        URL url3 = getClass().getResource("/pl.polsl.lab.snake/SnakeHelloFXML.fxml");
+        URL url4 = getClass().getResource("/SnakeHelloFXML.fxml");
         URL url = new File("src/main/java/pl/polsl/lab/snake/view/SnakeHelloFXML.fxml").toURI().toURL();
         //Parent root = FXMLLoader.load(getClass().getResource("view/SnakeHelloFXML.fxml"));
-        Parent root = FXMLLoader.load(url);
-        primaryStage.setScene(new Scene(root, 640, 480));
+//        Parent root = FXMLLoader.load(url);
+//        primaryStage.setScene(new Scene(root, 640, 480));
 
-        primaryStage.show();
+//        primaryStage.show();
 
 
     }

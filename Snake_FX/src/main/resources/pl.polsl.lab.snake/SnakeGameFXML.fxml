@@ -8,8 +8,8 @@
       <Button id="startSimulationButton" layoutX="164.0" layoutY="31.0" mnemonicParsing="false" onAction="#pressStartSimulationButton" text="Simulate" />
       <TableView id="gamesTableView" fx:id="gamesTableView" layoutX="14.0" layoutY="56.0" prefHeight="170.0" prefWidth="570.0">
         <columns>
-          <TableColumn prefWidth="100.0" text="Ok" />
-           <TableColumn prefWidth="470.0" text="Game result:" />
+          <TableColumn id="gameNumberTableColumn" fx:id="gameNumberTableColumn" prefWidth="100.0" text="Number" />
+           <TableColumn id="generatedGameTableColumn" fx:id="generatedGameTableColumn" prefWidth="470.0" text="Game result:" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="14.0" text="Enter snake runs: " />

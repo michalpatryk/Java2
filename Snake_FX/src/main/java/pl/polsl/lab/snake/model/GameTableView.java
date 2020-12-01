@@ -7,7 +7,7 @@ public class GameTableView {
     private final SimpleIntegerProperty gameNumber;
     private final SimpleStringProperty generatedGame;
 
-    private GameTableView(Integer gameNumber, String generatedGame){
+    public GameTableView(Integer gameNumber, String generatedGame){
         this.gameNumber = new SimpleIntegerProperty(gameNumber);
         this.generatedGame = new SimpleStringProperty(generatedGame);
     }

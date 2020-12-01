@@ -9,7 +9,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @version 1.0
+ * @author Michał Urbańczyk
+ */
 public class SnakeViewFX {
+
+
+    /**
+     * Creates new stage (window) with game
+     * @param actionEvent
+     */
     public void pressStartGameButton(ActionEvent actionEvent){
         Parent root;
         try {
@@ -25,6 +35,12 @@ public class SnakeViewFX {
         }
     }
 
+    /**
+     * Generates return String checking correct and user Answers
+     * @param correctAnswer
+     * @param userAnswer
+     * @return
+     */
     public String checkIfCorrect(int correctAnswer, int userAnswer){
         if(correctAnswer - userAnswer == 0){
             return "You were correct";

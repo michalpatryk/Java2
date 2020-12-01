@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
+ * Console version View
  * @version 1.0
  * @author Michał Urbańczyk
  */

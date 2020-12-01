@@ -5,7 +5,7 @@ module Snake {
     requires java.base;
 
     opens pl.polsl.lab.snake.controller;
-    opens pl.polsl.lab.snake.model;
+    opens pl.polsl.lab.snake.model;     //for GameTableView
     opens pl.polsl.lab.snake;
 
     exports pl.polsl.lab.snake to javafx.graphics;

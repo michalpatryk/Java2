@@ -7,7 +7,10 @@ import java.util.Scanner;
  * @version 1.0
  * @author Michał Urbańczyk
  */
-public class SnakeView {
+public class SnakeView{
+
+
+
     public int getParameters(){
         while(true) {
             System.out.println("Enter snake runs: ");

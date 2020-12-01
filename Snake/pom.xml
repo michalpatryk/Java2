@@ -6,6 +6,7 @@
 
     <groupId>pl.polsl.lab.snake</groupId>
     <artifactId>Snake</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
     <build>
         <plugins>
@@ -19,6 +20,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>untitled</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

@@ -76,4 +76,7 @@ public class SnakeController {
         snakeView.checkIfCorrect(snake.calculateRealMoves(), predictedMoves);
     }
 
+    public void showSnakeHello(){
+
+    }
 }

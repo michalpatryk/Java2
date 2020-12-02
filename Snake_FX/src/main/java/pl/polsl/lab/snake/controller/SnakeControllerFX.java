@@ -16,6 +16,7 @@ import pl.polsl.lab.snake.model.Snake;
 import pl.polsl.lab.snake.view.SnakeViewFX;
 
 /**
+ * Controls the flow of the application
  * @version 1.0
  * @author Michał Urbańczyk
  */
@@ -52,20 +53,22 @@ public class SnakeControllerFX  {
     @FXML
     private TableColumn<GameTableView, String> generatedGameTableColumn;
 
+
+    @FXML
     /**
      * Function executed after clicking "Start game" on main menu
      * @param actionEvent
      */
-    @FXML
     private void pressStartGameButton(ActionEvent actionEvent){
         snakeViewFX.pressStartGameButton(actionEvent);
     }
 
+
+    @FXML
     /**
      * Function executed after clicking "Simulate" on game screen
      * @param actionEvent
      */
-    @FXML
     private void pressStartSimulationButton(ActionEvent actionEvent){
         if(!snakeRunsTextField.getText().isEmpty()){
 
@@ -93,11 +96,12 @@ public class SnakeControllerFX  {
         }
     }
 
+
+    @FXML
     /**
      * Function executed after pressing "Snake won't crash!" on game screen
      * @param actionEvent
      */
-    @FXML
     private void pressUserAnswerSnakeWontCrashButton(ActionEvent actionEvent){
         GameTableView gameTableView = gamesTableView.getSelectionModel().getSelectedItem();
         if(gameTableView != null){
@@ -109,11 +113,12 @@ public class SnakeControllerFX  {
         }
     }
 
+
+    @FXML
     /**
      * Function executed after pressing "Check your answer:" on game screen
      * @param actionEvent
      */
-    @FXML
     private void pressUserCheckAnswerButton(ActionEvent actionEvent){
         GameTableView gameTableView = gamesTableView.getSelectionModel().getSelectedItem();
         if(gameTableView != null){

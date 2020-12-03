@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Snake_WEB:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Snake_WEB</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Snake_WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Snake_WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

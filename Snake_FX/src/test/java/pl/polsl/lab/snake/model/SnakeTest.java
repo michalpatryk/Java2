@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SnakeTest {
+public class SnakeTest {
     Snake snake;
 
     /**
      * Set ups the snake
      */
     @BeforeEach
-    void setup(){
+    public void setup(){
         snake = new Snake();
     }
 
@@ -27,7 +27,7 @@ class SnakeTest {
      */
     @ParameterizedTest
     @ValueSource(ints = {10, 40, 100, 1000})
-    void executeSimulation(int candidate) {
+    public void executeSimulation(int candidate) {
         snake.setHowManyMovesLeft(candidate);
         snake.executeSimulation();
         assertEquals(snake.getGeneratedGame().length(), candidate);
@@ -40,7 +40,7 @@ class SnakeTest {
      */
     @ParameterizedTest
     @ValueSource(strings = {"FFFFLFRF", "EEEEEELEREEE"})
-    void calculateRealMoves(String candidate) {
+    public void calculateRealMoves(String candidate) {
         snake.setGeneratedGame(candidate);
         assertEquals(snake.calculateRealMoves(), 0);
     }
@@ -52,12 +52,12 @@ class SnakeTest {
      */
     @ParameterizedTest
     @MethodSource("gameTester")
-    void calculateRealMovesDoubleArgs(String game, int length) {
+    public void calculateRealMovesDoubleArgs(String game, int length) {
         snake.setGeneratedGame(game);
         assertEquals(snake.calculateRealMoves(), length);
     }
 
-    private static Stream<Arguments> gameTester() {
+    public static Stream<Arguments> gameTester() {
         return Stream.of(
                 Arguments.of("EEEELELELE", 9),
                 Arguments.of("", 0),

@@ -12,7 +12,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SnakeViewTest {
+public class SnakeViewTest {
     private SnakeView snakeView;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -22,7 +22,7 @@ class SnakeViewTest {
      * Set ups the snakeView
      */
     @BeforeEach
-    void setup(){
+    public void setup(){
         snakeView = new SnakeView();
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
@@ -34,7 +34,7 @@ class SnakeViewTest {
      */
     @ParameterizedTest
     @ValueSource(strings = {"10", "40", "100", "-30", "0"})
-    void testGetParametersNumbers(String candidate) {
+    public void testGetParametersNumbers(String candidate) {
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(candidate.getBytes());
         System.setIn(in);

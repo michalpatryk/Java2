@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SnakeCellTest {
+public class SnakeCellTest {
 
     /**
      * Test check if .equals() and .hashCode() works properly
@@ -20,7 +20,7 @@ class SnakeCellTest {
      */
     @ParameterizedTest
     @MethodSource("hashAndEqualsProvider")
-    void testEqualsAndHash(int x1, int y1, int x2, int y2, boolean isEqual) {
+    public void testEqualsAndHash(int x1, int y1, int x2, int y2, boolean isEqual) {
         SnakeCell snakeCell1 = new SnakeCell(x1, y1);
         SnakeCell snakeCell2 = new SnakeCell(x2, y2);
         assertEquals(snakeCell1.equals(snakeCell2) && snakeCell2.equals(snakeCell1), isEqual);
@@ -31,7 +31,7 @@ class SnakeCellTest {
      * Provides a stream of data for testHashAndEqauls
      * @return Stream of test arguments
      */
-    private static Stream<Arguments> hashAndEqualsProvider() {
+    public static Stream<Arguments> hashAndEqualsProvider() {
         return Stream.of(
                 Arguments.of(1, 1, 1, 1, true),
                 Arguments.of(1, 2, 2, 1, false),

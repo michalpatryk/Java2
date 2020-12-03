@@ -4,14 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DirectionManagerTest {
+public class DirectionManagerTest {
     private DirectionManager directionManager;
 
     /**
      * Set ups the directionManager
      */
     @BeforeEach
-    void setUp(){
+    public void setUp(){
         directionManager = new DirectionManager();
     }
 
@@ -19,7 +19,7 @@ class DirectionManagerTest {
      * Left turning test and getHorizontalMath()/getVericalMath() test
      */
     @org.junit.jupiter.api.Test
-    void turnLeft() {
+    public void turnLeft() {
         assertEquals(directionManager.getHorizontalMath(), 0, "We are facing up");
         assertEquals(directionManager.getVerticalMath(), 1, "We are facing up");
         directionManager.turnLeft();
@@ -37,7 +37,7 @@ class DirectionManagerTest {
      * Right turning test and getHorizontalMath()/getVericalMath() test
      */
     @org.junit.jupiter.api.Test
-    void turnRight() {
+    public void turnRight() {
         assertEquals(directionManager.getHorizontalMath(), 0, "We are facing up");
         assertEquals(directionManager.getVerticalMath(), 1, "We are facing up");
         directionManager.turnRight();
